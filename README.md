@@ -1,1 +1,1 @@
-# star-tech-demo
+# demo-service
