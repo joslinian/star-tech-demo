@@ -21,7 +21,7 @@ public class StudentController {
     @Autowired
     private StudentService service;
 
-    @GetMapping(value = "/get-students", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/get-students", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Student> getStudents() {
         return service.getAllStudents();
     }
