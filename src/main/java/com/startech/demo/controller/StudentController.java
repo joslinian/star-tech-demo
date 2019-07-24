@@ -28,8 +28,8 @@ public class StudentController {
 
     @GetMapping(path = "/student-by-id", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<Student> getStudentById(@RequestParam("id") final Long id) {
-        return service.getStudentById(id);
+    public Student getStudentById(@RequestParam("id") final Long id) {
+        return service.getStudentById(id).get(0);
     }
 
     @PostMapping(path = "/add-account")
