@@ -19,8 +19,8 @@ public class StudentServiceImpl implements StudentService{
         return Lists.newArrayList(repository.findAll());
     }
 
-    public Student getStudentById(final Long id) {
-        return repository.getOne(id);
+    public List<Student> getStudentById(final Long id) {
+        return repository.findAllById(Lists.newArrayList(id));
     }
 
     public void save(final Student student) {
