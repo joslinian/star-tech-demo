@@ -20,8 +20,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     public Student getStudentById(final Long id) {
-        final Optional<Student> student = repository.findById(id);
-        return student.orElse(null);
+        return repository.getOne(id);
     }
 
     public void save(final Student student) {
